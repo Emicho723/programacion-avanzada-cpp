@@ -16,7 +16,7 @@
 
 double area(double base, double altura) {
     // TODO: retorna base * altura
-    return 0.0;
+    return base * altura;
 }
 
 double perimetro(double base, double altura) {
