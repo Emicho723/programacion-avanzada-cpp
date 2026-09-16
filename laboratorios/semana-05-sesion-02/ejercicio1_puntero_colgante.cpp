@@ -2,13 +2,15 @@
 
 // TODO: predice antes de compilar. ¿que advertencia esperas que de
 // el compilador sobre esta funcion?
-int* obtenerLecturaInsegura(int valorSensor) {
+int obtenerLecturaInsegura(int valorSensor) {
     int lectura = valorSensor * 2;
-    return &lectura;
+    return lectura;
 }
 
 int main() {
-    int* resultado = obtenerLecturaInsegura(10);
-    std::cout << "Lectura (puntero colgante): " << *resultado << std::endl;
+    int resultado = obtenerLecturaInsegura(10);
+    std::cout << "Lectura (segura): " << resultado << std::endl;
     return 0;
 }
+
+// ya no da aviso de puente colgante 
