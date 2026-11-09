@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Build artifacts
 bin/
 build/
@@ -12,3 +13,21 @@ build/
 
 # Logs
 *.log
+=======
+# Build artifacts
+bin/
+build/
+*.o
+*.obj
+*.out
+
+# Editor / OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# Logs
+*.log
+# Carpetas de compilacion de CMake (Semana 12)
+build-asan/
+>>>>>>> 3907ad0b327f4885b96020ae18cf61887e97e7d2
