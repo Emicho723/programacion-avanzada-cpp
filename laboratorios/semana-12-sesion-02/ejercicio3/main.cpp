@@ -1,3 +1,4 @@
+
 #include <iostream>
 
 #include "cola_impresion.h"
@@ -27,3 +28,4 @@ int main() {
 
     return 0;
 }
+
