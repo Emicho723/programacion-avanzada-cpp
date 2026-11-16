@@ -30,4 +30,10 @@ build/
 *.log
 # Carpetas de compilacion de CMake (Semana 12)
 build-asan/
+<<<<<<< HEAD
 >>>>>>> 3907ad0b327f4885b96020ae18cf61887e97e7d2
+=======
+
+# Compilacion con ThreadSanitizer (Semana 14)
+build-tsan/
+>>>>>>> 92643d065061fcee83ad915e255de5a6ce3fd7c8
