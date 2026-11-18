@@ -52,18 +52,32 @@ class TarjetaAtomica {
             // cambia el saldo solo si sigue valiendo actual. Si lo logra,
             // cuenta un cobro aceptado y sale. Si no, compare_exchange_weak
             // ya dejo en actual el saldo nuevo: el ciclo vuelve a decidir.
+
+            int actual = saldo.load();
+
+            while (true) {
+                if (actual < monto) {
+                    rechazados++;
+                    return;
+                }
+
+                if (saldo.compare_exchange_weak(actual, actual - monto)) {
+                    aceptados++;
+                    return;
+                }
+            }
         }
 
         int getSaldo() {
-            return saldo;
+            return saldo.load();
         }
 
         int getAceptados() {
-            return aceptados;
+            return aceptados.load();
         }
 
         int getRechazados() {
-            return rechazados;
+            return rechazados.load();
         }
 };
 
